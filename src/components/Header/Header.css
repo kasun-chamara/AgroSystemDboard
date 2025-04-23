@@ -1,12 +1,12 @@
 /* Header Container */
 .header {
+    font-family: 'Inter', sans-serif;
     height: 60px;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Align items to the right */
     padding: 0 20px; /* Add padding to the left and right */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    /* Add a subtle shadow */
     border-radius: 15px; /* Add 15px border radius */
     transition: width 0.3s ease; /* Smooth transition for width changes */
   }
@@ -26,26 +26,61 @@
     display: flex;
     align-items: center;
     gap: 20px; /* Add spacing between icons and profile image */
+    z-index: 1;
+  }
+  
+  /* Icon Container for Bell Icon */
+  .icon-container {
+    position: relative;
+  }
+  
+  .notification-dot {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #4caf50; /* Green color for the dot */
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid white; /* Add a white border to match the background */
   }
   
   /* Header Icons */
   .header-icon {
     font-size: 20px;
-    color: #4caf50; /* Green color for icons */
+    color: #7e7e7e; /* Gray color for icons */
     cursor: pointer;
-    transition: transform 0.2s ease; /* Smooth hover effect */
+    transition: transform 0.2s ease; 
+    margin-right: 10px;/* Smooth hover effect */
   }
   
   .header-icon:hover {
     transform: scale(1.2); /* Slightly enlarge on hover */
   }
   
-  /* Profile Image */
+  /* Profile Section */
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between profile image and text */
+    cursor: pointer;
+  }
+  
   .profile-image {
     width: 40px;
     height: 40px;
     border-radius: 50%; /* Make the image circular */
     object-fit: cover; /* Ensure the image fits properly */
-    cursor: pointer;
     border: 2px solid #4caf50; /* Add a green border */
+  }
+  
+  .profile-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Dark gray color for text */
+  }
+  
+  .dropdown-icon {
+    font-size: 14px;
+    color: #333; /* Dark gray color for the dropdown icon */
   }

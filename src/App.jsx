@@ -16,11 +16,7 @@ const App = () => {
       <SideNavBar isSidebarVisible={isSidebarVisible} />
       <div className="main-content">
         <Header isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
-        <div className="content">
-          {/* Main content goes here */}
-          <h1>Welcome to the Dashboard</h1>
-          <p>This is the main content area.</p>
-        </div>
+       
       </div>
     </div>
   );
