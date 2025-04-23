@@ -1,0 +1,21 @@
+/* App Container */
+.app-container {
+    display: flex;
+    gap: 10px; /* Add a 10px gap between the sidebar and the main content */
+    margin: 20px; /* Add 20px margin around the entire app */
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    border-radius: 15px; /* Add 15px border radius */
+    background-color: white; /* Optional: Add a background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+  }
+  
+  /* Content Area */
+  .content {
+    padding: 20px; /* Add padding inside the content area */
+    margin-top: 60px; /* Add space below the header */
+  }

@@ -1,0 +1,51 @@
+/* Header Container */
+.header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 0 20px; /* Add padding to the left and right */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 15px; /* Add 15px border radius */
+    transition: width 0.3s ease; /* Smooth transition for width changes */
+  }
+  
+  /* Header with Sidebar */
+  .header.with-sidebar {
+    margin-left: 270px; /* Adjust for the sidebar width */
+  }
+  
+  /* Full-Width Header */
+  .header.full-width {
+    margin-left: 0; /* No margin when sidebar is hidden */
+  }
+  
+  /* Header Right Section */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add spacing between icons and profile image */
+  }
+  
+  /* Header Icons */
+  .header-icon {
+    font-size: 20px;
+    color: #4caf50; /* Green color for icons */
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .header-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits properly */
+    cursor: pointer;
+    border: 2px solid #4caf50; /* Add a green border */
+  }
