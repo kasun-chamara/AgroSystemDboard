@@ -4,28 +4,27 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align items to the right */
-    padding: 0 20px; /* Add padding to the left and right */
-    /* Add a subtle shadow */
-    border-radius: 15px; /* Add 15px border radius */
-    transition: width 0.3s ease; /* Smooth transition for width changes */
+    justify-content: flex-end;
+    padding: 0 20px;
+    border-radius: 15px;
+    transition: width 0.3s ease;
   }
   
   /* Header with Sidebar */
   .header.with-sidebar {
-    margin-left: 270px; /* Adjust for the sidebar width */
+    margin-left: 270px;
   }
   
   /* Full-Width Header */
   .header.full-width {
-    margin-left: 0; /* No margin when sidebar is hidden */
+    margin-left: 0;
   }
   
   /* Header Right Section */
   .header-right {
     display: flex;
     align-items: center;
-    gap: 20px; /* Add spacing between icons and profile image */
+    gap: 20px;
     z-index: 1;
   }
   
@@ -37,50 +36,145 @@
   .notification-dot {
     position: absolute;
     top: -5px;
-    right: 5px;
+    right: -5px;
     width: 10px;
     height: 10px;
-    background-color: #4caf50; /* Green color for the dot */
-    border-radius: 50%; /* Make it circular */
-    border: 2px solid white; /* Add a white border to match the background */
+    background-color: #4caf50;
+    border-radius: 50%;
+    border: 2px solid white;
   }
   
   /* Header Icons */
   .header-icon {
     font-size: 20px;
-    color: #7e7e7e; /* Gray color for icons */
+    color: #7e7e7e;
     cursor: pointer;
-    transition: transform 0.2s ease; 
-    margin-right: 10px;/* Smooth hover effect */
+    transition: transform 0.2s ease;
   }
   
   .header-icon:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
+    transform: scale(1.2);
   }
   
   /* Profile Section */
   .profile-section {
     display: flex;
     align-items: center;
-    gap: 10px; /* Add spacing between profile image and text */
+    gap: 10px;
     cursor: pointer;
   }
   
   .profile-image {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Make the image circular */
-    object-fit: cover; /* Ensure the image fits properly */
-    border: 2px solid #4caf50; /* Add a green border */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4caf50;
   }
   
   .profile-name {
     font-size: 16px;
     font-weight: 500;
-    color: #333; /* Dark gray color for text */
+    color: #333;
   }
   
   .dropdown-icon {
     font-size: 14px;
-    color: #333; /* Dark gray color for the dropdown icon */
+    color: #333;
+  }
+  /* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 90px; /* Position below the header */
+    right: 20px; /* Align to the right */
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1000;
+  }
+  
+  /* Dropdown Header */
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .dropdown-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .close-button:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Dropdown Content */
+  .dropdown-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .dropdown-profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4caf50;
+  }
+  
+  .dropdown-profile-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Dropdown Actions */
+  .dropdown-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-profile-button,
+  .logout-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(115, 255, 204, 0.503);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .add-profile-button:hover,
+  .logout-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+  }
+  
+  .action-icon {
+    font-size: 16px;
+    color: #4caf50;
   }

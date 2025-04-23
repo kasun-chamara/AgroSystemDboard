@@ -1,29 +1,18 @@
 import React, { useState } from "react";
 import "./SideNavBar.css";
-
-// Import Font Awesome icons
 import { FaTachometerAlt, FaWarehouse, FaUserFriends, FaShoppingCart, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const SideNavBar = () => {
-  // State to track the active link
+const SideNavBar = ({ isSidebarVisible, toggleSidebar, setActivePage }) => {
   const [activeLink, setActiveLink] = useState("dashboard");
-
-  // State to toggle sidebar visibility
-  const [isSidebarVisible, setIsSidebarVisible] = useState(true);
 
   // Function to handle link clicks
   const handleLinkClick = (link) => {
     setActiveLink(link);
-  };
-
-  // Function to toggle sidebar visibility
-  const toggleSidebar = () => {
-    setIsSidebarVisible(!isSidebarVisible);
+    setActivePage(link); // Update the active page in App.jsx
   };
 
   return (
     <div className={`sidebar-container ${isSidebarVisible ? "expanded" : "collapsed"}`}>
-      {/* Sidebar */}
       <div className="sidenav">
         <div className="company-name">Agro Dashboard</div>
         <ul className="nav-links">

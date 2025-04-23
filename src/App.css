@@ -1,21 +1,40 @@
 /* App Container */
 .app-container {
-    display: flex;
-    gap: 10px; /* Add a 10px gap between the sidebar and the main content */
-    margin: 20px; /* Add 20px margin around the entire app */
-  }
-  
-  /* Main Content */
-  .main-content {
-    flex: 1;
-    border-radius: 15px; /* Add 15px border radius */
-    background-color: white; /* Optional: Add a background color */
-     /* Optional: Add a subtle shadow */
-    overflow: hidden; /* Ensure content stays within the rounded corners */
-  }
-  
-  /* Content Area */
-  .content {
-    padding: 20px; /* Add padding inside the content area */
-    margin-top: 60px; /* Add space below the header */
-  }
+  display: flex;
+  gap: 10px;
+  margin: 20px; /* Add 20px margin around the app */
+}
+
+/* Sidebar Visibility */
+.sidebar-visible .main-content {
+  margin-left: 270px; /* Adjust for sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-hidden .main-content {
+  margin-left: 0; /* Full width when sidebar is hidden */
+  transition: margin-left 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Content Area */
+.content {
+  padding: 20px;
+  margin-top: 60px; /* Space below the header */
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
