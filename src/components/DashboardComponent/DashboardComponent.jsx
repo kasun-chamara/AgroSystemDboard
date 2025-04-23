@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaCalendarAlt } from "react-icons/fa"; // Import calendar icon
+import { FaCalendarAlt, FaAppleAlt, FaCarrot, FaLemon, FaSeedling, FaArrowUp, FaArrowDown } from "react-icons/fa"; // Import icons
+import cardsData from "../../mock/cardsData"; // Import mock data
 import "./DashboardComponent.css";
 
 const DashboardComponent = () => {
@@ -13,6 +14,14 @@ const DashboardComponent = () => {
 
     return () => clearInterval(timer); // Cleanup the interval on component unmount
   }, []);
+
+  // Map icons to their respective components
+  const iconMap = {
+    FaAppleAlt: <FaAppleAlt />,
+    FaCarrot: <FaCarrot />,
+    FaLemon: <FaLemon />,
+    FaSeedling: <FaSeedling />,
+  };
 
   return (
     <>
@@ -31,11 +40,24 @@ const DashboardComponent = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="dashboard-cards">
-        <div className="card">Card 1</div>
-        <div className="card">Card 2</div>
-        <div className="card">Card 3</div>
-        <div className="card">Card 4</div>
+      <div className="dashboard-cards-container">
+        <div className="dashboard-cards">
+          {cardsData.map((card) => (
+            <div className="card" key={card.id}>
+              <div className="card-icon">{iconMap[card.icon]}</div>
+              <div className="card-details">
+                <h3 className="card-name">{card.name}</h3>
+                <p className="card-required">
+                  {card.requiredKg}
+                  <span className="arrows">
+                    <FaArrowUp className="arrow-up" />
+                    <FaArrowDown className="arrow-down" />
+                  </span>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

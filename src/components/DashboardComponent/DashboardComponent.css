@@ -61,31 +61,117 @@
     font-weight: 500;
     color: #999; /* Gray color for the separator */
 }
-
 /* Cards Section */
+.dashboard-cards-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent cards from wrapping */
+    padding-bottom: 10px; /* Add padding to avoid scrollbar overlap */
+    scrollbar-width: thin; /* For Firefox: Thin scrollbar */
+    scrollbar-color: #ccc transparent; /* For Firefox: Custom scrollbar color */
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+.dashboard-cards-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.dashboard-cards-container::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.dashboard-cards-container::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent scrollbar track */
+}
+
 .dashboard-cards {
     display: flex;
-    justify-content: space-between; /* Space between cards */
+    justify-content: flex-start; /* Align cards to the left */
     gap: 15px; /* Add spacing between cards */
     margin-top: 20px; /* Add spacing above the cards */
 }
 
 .card {
-    flex: 1; /* Make all cards equal width */
-    height: 70px; /* Fixed height */
+    flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+    width: 200px; /* Fixed width for each card */
+    height: 80px; /* Fixed height */
     background-color: #ffffff; /* White background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #333; /* Dark text color */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Space between icon and text */
+    padding: 10px; /* Add padding inside the card */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    overflow: hidden; /* Prevent content from overflowing the card */
 }
 
 .card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.card-icon {
+    font-size: 30px;
+    color: #333; /* Icon color */
+    margin-right: 10px; /* Add spacing between icon and text */
+}
+
+.card-details {
+    display: flex;
+    flex-direction: row; /* Align items in a single row */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between elements */
+    gap: 10px; /* Add spacing between name, kg, and arrows */
+    width: 100%; /* Ensure content stays within the card */
+}
+
+.card-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+.card-required {
+    font-size: 20px;
+    color: #555;
+    display: flex;
+    align-items: center; /* Align kg and arrows vertically */
+    gap: 5px; /* Add spacing between kg and arrows */
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column; /* Stack arrows vertically */
+    align-items: center; /* Center arrows */
+    gap: 2px; /* Add spacing between arrows */
+}
+
+.arrow-up {
+    font-size: 12px;
+    color: #4caf50; /* Green color for the top arrow */
+}
+
+.arrow-down {
+    font-size: 12px;
+    color: #f44336; /* Red color for the bottom arrow */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .dashboard-cards-container {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping */
+        gap: 10px; /* Reduce gap between cards for smaller screens */
+    }
+
+    .card {
+        flex: 0 0 auto; /* Ensure cards remain scrollable */
+        width: 200px; /* Keep card width consistent */
+        height: 80px; /* Keep card height consistent */
+    }
 }
