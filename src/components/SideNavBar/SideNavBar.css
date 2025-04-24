@@ -2,7 +2,7 @@
 .sidenav {
   position: fixed; /* Fix the sidebar to the left of the screen */
   top: 10px; /* Add 10px margin from the top */
-  left: 10px; /* Add 10px margin from the left */
+  left: 0; /* Align to the left edge */
   width: 250px;
   height: calc(95vh - 20px); /* Full height minus 20px for top and bottom margins */
   background-color: white; /* Change background to white */
@@ -19,7 +19,7 @@
 }
 
 .sidebar-container.collapsed .sidenav {
-  transform: translateX(-260px); /* Move sidebar out of view */
+  transform: translateX(-100%); /* Completely hide the sidebar */
 }
 
 /* Company Name */
@@ -106,9 +106,9 @@
   cursor: pointer;
   font-size: 18px;
   z-index: 2;
- /* Add shadow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
   transition: transform 0.3s ease, left 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.2); /* Smooth transition for movement */
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-container.collapsed .toggle-button {
@@ -117,4 +117,19 @@
 
 .toggle-button:hover {
   transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidenav {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+
+  .toggle-button {
+    left: 220px; /* Adjust toggle button position */
+  }
+
+  .sidebar-container.collapsed .toggle-button {
+    left: 10px; /* Move toggle button closer when collapsed */
+  }
 }

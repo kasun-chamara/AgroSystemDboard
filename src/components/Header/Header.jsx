@@ -24,7 +24,9 @@ const Header = ({ isSidebarVisible }) => {
         </div>
 
         {/* Message Icon */}
-        <FaEnvelope className="header-icon" title="Messages" />
+        <div className="icon-container">
+          <FaEnvelope className="header-icon" title="Messages" />
+        </div>
 
         {/* Profile Section */}
         <div className="profile-section" onClick={toggleDropdown}>
@@ -35,12 +37,14 @@ const Header = ({ isSidebarVisible }) => {
           />
           <span className="profile-name">Hi {currentUser.name}</span> {/* Use name from mock data */}
           <FaCaretDown className="dropdown-icon" />
+          
         </div>
       </div>
 
       {/* Dropdown Menu */}
       {isDropdownVisible && (
         <div className="dropdown-menu">
+          
           <div className="dropdown-header">
             <span className="dropdown-title">User Profile</span>
             <button className="close-button" onClick={toggleDropdown}>
@@ -56,11 +60,12 @@ const Header = ({ isSidebarVisible }) => {
             <span className="dropdown-profile-name">{currentUser.name}</span>
           </div>
           <div className="dropdown-actions">
+            
             <button className="add-profile-button">
               <FaUserPlus className="action-icon" /> Add Profile
             </button>
             <button className="logout-button">
-              <FaSignOutAlt className="action-icon" /> 
+              <FaSignOutAlt className="action-icon" /> Logout
             </button>
           </div>
         </div>

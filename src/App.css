@@ -2,7 +2,8 @@
 .app-container {
   display: flex;
   gap: 10px;
-  margin: 20px; /* Add 20px margin around the app */
+  margin: 10px; /* Set a consistent 10px margin around the app */
+  box-sizing: border-box; /* Ensure padding and border are included in the width/height */
 }
 
 /* Sidebar Visibility */
@@ -23,6 +24,8 @@
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: calc(100% - 20px); /* Account for 10px margin on both sides */
+  box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 /* Content Area */
@@ -37,4 +40,20 @@
   border-radius: 15px;
   background-color: #f9f9f9;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack sidebar and main content vertically */
+    margin: 10px; /* Maintain 10px margin on smaller screens */
+  }
+
+  .sidebar-visible .main-content {
+    margin-left: 0; /* Sidebar will overlay on smaller screens */
+  }
+
+  .main-content {
+    width: 100%; /* Full width for main content */
+  }
 }
