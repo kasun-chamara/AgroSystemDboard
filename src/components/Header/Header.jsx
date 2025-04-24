@@ -15,7 +15,7 @@ const Header = ({ isSidebarVisible }) => {
   };
 
   return (
-    <div className={`header ${isSidebarVisible ? "with-sidebar" : "full-width"}`}>
+    <div className="header">
       <div className="header-right">
         {/* Bell Icon with Green Dot */}
         <div className="icon-container">
@@ -37,14 +37,12 @@ const Header = ({ isSidebarVisible }) => {
           />
           <span className="profile-name">Hi {currentUser.name}</span> {/* Use name from mock data */}
           <FaCaretDown className="dropdown-icon" />
-          
         </div>
       </div>
 
       {/* Dropdown Menu */}
       {isDropdownVisible && (
         <div className="dropdown-menu">
-          
           <div className="dropdown-header">
             <span className="dropdown-title">User Profile</span>
             <button className="close-button" onClick={toggleDropdown}>
@@ -60,7 +58,6 @@ const Header = ({ isSidebarVisible }) => {
             <span className="dropdown-profile-name">{currentUser.name}</span>
           </div>
           <div className="dropdown-actions">
-            
             <button className="add-profile-button">
               <FaUserPlus className="action-icon" /> Add Profile
             </button>
