@@ -1,0 +1,146 @@
+/* Container */
+.farmers-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+  /* Enhanced shadow */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .farmers-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+   /* Enhanced shadow on hover */
+  }
+  
+  /* Title */
+  .farmers-title {
+    font-size: 28px; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase; /* Make the title uppercase */
+    letter-spacing: 1px; /* Add spacing between letters */
+    margin-top: -50px;
+  }
+  
+  /* Table */
+  .farmers-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden; /* Ensure table content stays within bounds */
+    border-radius: 10px; /* Rounded corners for the table */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .farmers-table th,
+  .farmers-table td {
+    padding: 15px 20px; /* Add more padding for better spacing */
+    border: 1px solid #ffffff;
+    font-size: 16px; /* Slightly larger font size */
+  }
+  
+  .farmers-table th {
+    background-color: #ffffff;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase; /* Make header text uppercase */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+  }
+  
+  .farmers-table tr:nth-child(even) {
+    background-color: #cafffa62; /* Light gray for even rows */
+  }
+  
+  .farmers-table tr:hover {
+    background-color: #9696962b; /* Light blue hover effect */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  /* Farmer Image */
+  .farmer-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd; /* Add a border around the image */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  .farmer-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    border-color: #4caf50; /* Change border color on hover */
+  }
+  
+  /* Status Badge */
+  .status-badge {
+    padding: 8px 12px; /* Add more padding for better spacing */
+    border-radius: 20px; /* Make the badge more rounded */
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; /* Make status text uppercase */
+    letter-spacing: 0.5px; /* Add spacing between letters */
+  }
+  
+  .status-badge.active {
+    background-color: #47ff94; /* Green for Active */
+  }
+  
+  .status-badge.pending {
+    background-color: #ffbe5d; /* Yellow for Pending */
+  }
+  
+  .status-badge.closed {
+    background-color: #f43688; /* Red for Closed */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .farmers-table th,
+    .farmers-table td {
+      font-size: 14px; /* Reduce font size for smaller screens */
+      padding: 10px 12px; /* Adjust padding for smaller screens */
+    }
+  
+    .farmers-title {
+      font-size: 22px; /* Reduce title size for smaller screens */
+    }
+  
+    .farmer-image {
+      width: 40px; /* Smaller image size */
+      height: 40px;
+    }
+  }
+
+  /* Pagination Buttons */
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  .pagination-button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 20px; /* Circular buttons */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .pagination-button:disabled {
+    background-color: #cccccc; /* Gray background for disabled buttons */
+    cursor: not-allowed;
+  }

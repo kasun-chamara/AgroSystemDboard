@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import SideNavBar from "./components/SideNavBar/SideNavBar";
 import Header from "./components/Header/Header";
-import DashboardComponent from "./components/DashboardComponent/DashboardComponent"; // Import the new component
+import DashboardComponent from "./components/DashboardComponent/DashboardComponent"; // Import the Dashboard component
+import Farmers from "./components/Farmers/Farmers"; // Import the Farmers component
 import "./App.css";
 
 const App = () => {
@@ -23,8 +24,8 @@ const App = () => {
       <div className="main-content">
         <Header isSidebarVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
         <div className="content">
-          {activePage === "dashboard" && <DashboardComponent />} {/* Render the new component */}
-          {/* Add more pages here if needed */}
+          {activePage === "dashboard" && <DashboardComponent />} {/* Render Dashboard */}
+          {activePage === "farmers" && <Farmers />} {/* Render Farmers */}
         </div>
       </div>
     </div>
