@@ -3,14 +3,12 @@
     padding: 20px;
     background-color: #ffffff;
     border-radius: 15px;
-  /* Enhanced shadow */
     margin-top: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
   }
   
   .farmers-container:hover {
     transform: translateY(-5px); /* Slight lift on hover */
-   /* Enhanced shadow on hover */
   }
   
   /* Title */
@@ -18,11 +16,17 @@
     font-size: 28px; /* Larger font size */
     font-weight: bold;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
     text-transform: uppercase; /* Make the title uppercase */
     letter-spacing: 1px; /* Add spacing between letters */
-    margin-top: -50px;
+    margin-top: -80px;
+  }
+  
+  /* Table Wrapper for Horizontal Scrolling */
+  .table-wrapper {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-top: 20px; /* Add spacing above the table */
   }
   
   /* Table */
@@ -33,6 +37,8 @@
     overflow: hidden; /* Ensure table content stays within bounds */
     border-radius: 10px; /* Rounded corners for the table */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    min-width: 800px; /* Ensure the table has a minimum width */
+    table-layout: fixed; /* Fix column widths */
   }
   
   .farmers-table th,
@@ -40,6 +46,9 @@
     padding: 15px 20px; /* Add more padding for better spacing */
     border: 1px solid #ffffff;
     font-size: 16px; /* Slightly larger font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
   }
   
   .farmers-table th {
@@ -115,7 +124,6 @@
       height: 40px;
     }
   }
-
   /* Pagination Buttons */
 .pagination-buttons {
     display: flex;
@@ -129,7 +137,7 @@
     background-color: #4caf50; /* Green background */
     color: white;
     border: none;
-    border-radius: 20px; /* Circular buttons */
+    border-radius: 50%; /* Circular buttons */
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;

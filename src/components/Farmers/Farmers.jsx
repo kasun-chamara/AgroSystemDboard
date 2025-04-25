@@ -28,36 +28,40 @@ const Farmers = () => {
   return (
     <div className="farmers-container">
       <h2 className="farmers-title">Farmers Details</h2>
-      <table className="farmers-table">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Period</th>
-            <th>Expected Kg</th>
-            <th>Location</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentRows.map((farmer) => (
-            <tr key={farmer.id}>
-              <td>
-                <img src={farmer.image} alt={farmer.name} className="farmer-image" />
-              </td>
-              <td>{farmer.name}</td>
-              <td>{farmer.period}</td>
-              <td>{farmer.expectedKg} Kg</td>
-              <td>{farmer.location}</td>
-              <td>
-                <span className={`status-badge ${farmer.status.toLowerCase()}`}>
-                  {farmer.status}
-                </span>
-              </td>
+      <div className="table-wrapper">
+        <table className="farmers-table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>TP</th> {/* Added Farmers TP column */}
+              <th>Period</th>
+              <th>Expected Kg</th>
+              <th>Location</th>
+              <th>Status</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {currentRows.map((farmer) => (
+              <tr key={farmer.id}>
+                <td>
+                  <img src={farmer.image} alt={farmer.name} className="farmer-image" />
+                </td>
+                <td>{farmer.name}</td>
+                <td>{farmer.tp}</td> {/* Render Farmers TP */}
+                <td>{farmer.period}</td>
+                <td>{farmer.expectedKg} Kg</td>
+                <td>{farmer.location}</td>
+                <td>
+                  <span className={`status-badge ${farmer.status.toLowerCase()}`}>
+                    {farmer.status}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Pagination Buttons */}
       <div className="pagination-buttons">
