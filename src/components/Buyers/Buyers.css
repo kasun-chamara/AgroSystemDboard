@@ -1,27 +1,28 @@
 /* Container */
-.farmers-container {
+.buyers-container {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 15px;
     margin-top: 20px;
-    border: 1px solid #e0e0e0;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border: 1px solid #e0e0e0; /* Add a border around the container */
   }
   
-  .farmers-container:hover {
+  .buyers-container:hover {
     transform: translateY(-5px); /* Slight lift on hover */
   }
   
   /* Title */
-  .farmers-title {
+  .buyers-title {
     font-size: 28px; /* Larger font size */
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
+    margin-top: -80px;
     text-align: center;
     text-transform: uppercase; /* Make the title uppercase */
     letter-spacing: 1px; /* Add spacing between letters */
-    margin-top: -80px;
+
   }
   
   /* Table Wrapper for Horizontal Scrolling */
@@ -31,7 +32,7 @@
   }
   
   /* Table */
-  .farmers-table {
+  .buyers-table {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
@@ -42,8 +43,8 @@
     table-layout: fixed; /* Fix column widths */
   }
   
-  .farmers-table th,
-  .farmers-table td {
+  .buyers-table th,
+  .buyers-table td {
     padding: 15px 20px; /* Add more padding for better spacing */
     border: 1px solid #ffffff;
     font-size: 16px; /* Slightly larger font size */
@@ -52,7 +53,7 @@
     text-overflow: ellipsis; /* Add ellipsis for overflowing text */
   }
   
-  .farmers-table th {
+  .buyers-table th {
     background-color: #ffffff;
     font-weight: bold;
     color: #333;
@@ -60,17 +61,17 @@
     letter-spacing: 0.5px; /* Add spacing between letters */
   }
   
-  .farmers-table tr:nth-child(even) {
-    background-color: #cafffa62; /* Light gray for even rows */
+  .buyers-table tr:nth-child(even) {
+    background-color: #cafffa62;/* Light gray for even rows */
   }
   
-  .farmers-table tr:hover {
+  .buyers-table tr:hover {
     background-color: #9696962b; /* Light blue hover effect */
     transition: background-color 0.3s ease; /* Smooth hover transition */
   }
   
-  /* Farmer Image */
-  .farmer-image {
+  /* Buyer Image */
+  .buyer-image {
     width: 50px;
     height: 50px;
     border-radius: 15px;
@@ -79,56 +80,13 @@
     transition: transform 0.3s ease; /* Smooth zoom effect */
   }
   
-  .farmer-image:hover {
+  .buyer-image:hover {
     transform: scale(1.1); /* Slight zoom on hover */
     border-color: #4caf50; /* Change border color on hover */
   }
   
-  /* Status Badge */
-  .status-badge {
-    padding: 8px 12px; /* Add more padding for better spacing */
-    border-radius: 20px; /* Make the badge more rounded */
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase; /* Make status text uppercase */
-    letter-spacing: 0.5px; /* Add spacing between letters */
-  }
-  
-  .status-badge.active {
-    color: #00b84d;
-    border: 2px  solid  #00b84d; /* Green for Active */
-  }
-  
-  .status-badge.pending {
-    color:   #de8500;
-    border: 2px  solid   #de8500; /* Yellow for Pending */
-  }
-  
-  .status-badge.closed {
-    color:  #ba0051;
-    border: 2px  solid   #ba0051; /* Red for Closed */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .farmers-table th,
-    .farmers-table td {
-      font-size: 14px; /* Reduce font size for smaller screens */
-      padding: 10px 12px; /* Adjust padding for smaller screens */
-    }
-  
-    .farmers-title {
-      font-size: 22px; /* Reduce title size for smaller screens */
-    }
-  
-    .farmer-image {
-      width: 40px; /* Smaller image size */
-      height: 40px;
-    }
-  }
   /* Pagination Buttons */
-.pagination-buttons {
+  .pagination-buttons {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -140,7 +98,7 @@
     background-color: #4caf50; /* Green background */
     color: white;
     border: none;
-    border-radius: 20px;; /* Circular buttons */
+    border-radius: 20px; /* Circular buttons */
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;

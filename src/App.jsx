@@ -3,6 +3,8 @@ import SideNavBar from "./components/SideNavBar/SideNavBar";
 import Header from "./components/Header/Header";
 import DashboardComponent from "./components/DashboardComponent/DashboardComponent"; // Import the Dashboard component
 import Farmers from "./components/Farmers/Farmers"; // Import the Farmers component
+import Buyers from "./components/Buyers/Buyers"; // Import Buyers component
+import Stock from "./components/Stock/Stock";
 import "./App.css";
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
         <div className="content">
           {activePage === "dashboard" && <DashboardComponent />} {/* Render Dashboard */}
           {activePage === "farmers" && <Farmers />} {/* Render Farmers */}
+          {activePage === "buyers" && <Buyers />} {/* Render Buyers */}
+          {activePage === "stock" && <Stock />}
         </div>
       </div>
     </div>
@@ -33,3 +37,8 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
