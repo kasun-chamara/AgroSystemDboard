@@ -14,7 +14,7 @@ const SideNavBar = ({ isSidebarVisible, toggleSidebar, setActivePage }) => {
   return (
     <div className={`sidebar-container ${isSidebarVisible ? "expanded" : "collapsed"}`}>
       <div className="sidenav">
-        <div className="company-name">Agro Dashboard</div>
+        <div className="company-name">Agro Dashboard..</div>
         <ul className="nav-links">
           <li>
             <a
